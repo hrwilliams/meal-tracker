@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <div class ="container">
     <h1>Meal Tracker</h1>
-    <h3 *ngFor="let currentFood of foods">{{ currentFood.name }}</h3>
+    <h3 *ngFor="let currentFood of foods">{{ currentFood.name + " ||" }} {{ currentFood.calories + " calories || "}} {{"details: " + currentFood.details }} </h3>
   </div>
   `
 })
@@ -18,6 +18,6 @@ export class AppComponent {
 }
 
 export class Food {
-  constructor(public name: string, public calories: number, public details: string){  
+  constructor(public name: string, public calories: number, public details: string){
   }
 }
