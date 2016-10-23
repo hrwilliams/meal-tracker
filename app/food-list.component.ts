@@ -14,4 +14,7 @@ import { Food } from './food.model';
 export class FoodListComponent {
   @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
+  editButtonHasBeenClicked(foodToEdit: Food) {
+    this.clickSender.emit(foodToEdit);
+  }
 }
