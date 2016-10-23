@@ -24,8 +24,6 @@ import { Food } from './food.model';
 
 export class AppComponent {
   public masterFoodList: Food[] = [
-    new Food ("Test Food", 100, "delete me on the backend later"),
-    new Food ("Test Food2", 200, "delete me on the backend later")
   ];
   selectedFood: Food = null;
   showDetails(clickedFood: Food) {
